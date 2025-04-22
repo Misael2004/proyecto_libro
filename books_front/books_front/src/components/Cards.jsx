@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import ViewImg from "./ViewImg";
+import {envs} from '../config/envs'
 
 export default function Cards({ books }) {
   const [view, setView] = useState("");
@@ -8,13 +9,13 @@ export default function Cards({ books }) {
   const handleView = (url) => {
     setView(url);
   };
-
+ const imgFn = (url) => (`${envs.BASE_API/url}`)
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
         {books?.map((book, index) => (
           <motion.div
-            onClick={() => handleView(book.url)}
+            onClick={() => handleView(imgFn(book?.url))}
             key={index}
             className="max-w-sm rounded-lg overflow-hidden bg-white"
             initial={{ opacity: 0, y: 50 }}
@@ -31,7 +32,7 @@ export default function Cards({ books }) {
             }}
           >
             <img
-              src={book?.url}
+              src={() => imgFn(book?.url)}
               alt={book?.title}
               className="w-full h-48 object-cover"
             />
