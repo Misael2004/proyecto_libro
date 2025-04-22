@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ViewImg from "./ViewImg";
+import {envs} from '../config/envs'
 
 export default function CardAuthor({ authors }) {
   const navigate = useNavigate();
@@ -14,6 +15,8 @@ export default function CardAuthor({ authors }) {
   const handleView = (url) => {
     setView(url);
   };
+
+  const imgFn = (url) => (`${envs.BASE_API}/${url}`)
 
   return (
     <>
@@ -36,8 +39,8 @@ export default function CardAuthor({ authors }) {
             }}
           >
             <img
-              onClick={() => handleView(author.img)}
-              src={author?.img}
+              onClick={() => handleView(imgFn(author.img))}
+              src={() => imgFn(author?.img)}
               alt={author?.name}
               className="w-full h-48 object-cover"
             />
