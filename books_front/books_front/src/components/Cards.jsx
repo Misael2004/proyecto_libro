@@ -20,7 +20,7 @@ retun `${envs.BASE_API}/${url}`
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
         {books?.map((book, index) => (
           <motion.div
-            onClick={() => handleView(`${envs.BASE_API}/${book?.url}`)}
+            onClick={() => handleView(`https://proyecto-libro-igm4.onrender.com/${book?.url}`)}
             key={index}
             className="max-w-sm rounded-lg overflow-hidden bg-white"
             initial={{ opacity: 0, y: 50 }}
@@ -37,7 +37,7 @@ retun `${envs.BASE_API}/${url}`
             }}
           >
             <img
-              src={`${envs.BASE_API}/${book?.url}`}
+              src={`https://proyecto-libro-igm4.onrender.com/${book?.url}`}
               alt={book?.title}
               className="w-full h-48 object-cover"
             />
