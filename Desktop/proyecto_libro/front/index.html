@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+</head>
+
+<body>
+    <button class="btn-action" onclick="getAllBooks()">Click</button>
+
+
+
+    <script>
+
+        const api = 'http://localhost:4000/api'
+        const getAllBooks = async () => {
+            try {
+                const res = await fetch(`${api}/list`, {
+                    method: 'GET',
+                    'Content-Type': 'application/json'
+                })
+
+                const data = await res.json()
+
+                console.log(data);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    </script>
+</body>
+
+</html>
