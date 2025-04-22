@@ -10,7 +10,10 @@ export default function Cards({ books }) {
     setView(url);
   };
 
-    const imgFn = (url) => (`${envs.BASE_API}/${url}`)
+    const imgFn = (url) => {
+      console.log(`${envs.BASE_API}/${url}`)
+retun `${envs.BASE_API}/${url}`
+    }
 
   return (
     <>
