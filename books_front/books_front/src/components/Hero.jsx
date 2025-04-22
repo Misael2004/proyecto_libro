@@ -21,7 +21,7 @@ function Hero() {
   useEffect(() => {
     const getBooks = async () => {
       try {
-        const res = await fetch(`${api}/biblioteca`, {
+        const res = await fetch(`${api}/list`, {
           method: "GET",
           "Content-Type": "application/json",
         });
