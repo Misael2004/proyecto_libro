@@ -120,14 +120,14 @@ function Hero() {
           <small></small>
           <ReactTyped
             strings={[
-              "Hecho por Hilari 💕",
-              "Por favor espera ❤️",
-              "El servidor se apaga y tiene que volver a encender",
-              " encendiendo... 😊",
-              "Puede que tarde un poco mas, ten paciencia 🤐",
-              "Ya casi 👌",
-              "Esto sucede porque el servidor usa una instancia gratuita",
-            ]}
+  "Creado con cariño por Misael 💻✨",
+  "¡Un momento, por favor! ❤️",
+  "El servidor está descansando... necesita volver a activarse 💤🔄",
+  "¡Encendiendo motores! 🚀😊",
+  "Esto podría tardar un poquito más... ¡Gracias por tu paciencia! ⏳🤐",
+  "¡Ya casi lo tenemos! 👌🔥",
+  "Esto pasa porque usamos una instancia gratuita 💸🧠"
+]}
             typeSpeed={60} // Ajustar para suavizar
             backSpeed={20} // Ajustar para suavizar
             loop
