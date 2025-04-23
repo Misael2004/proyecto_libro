@@ -10,17 +10,12 @@ export default function Cards({ books }) {
     setView(url);
   };
 
-    const imgFn = (url) => {
-      console.log(`${envs.BASE_API}/${url}`)
-retun `${envs.BASE_API}/${url}`
-    }
-
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
         {books?.map((book, index) => (
           <motion.div
-            onClick={() => handleView(`https://proyecto-libro-igm4.onrender.com/${book?.url}`)}
+            onClick={() => handleView(book.url)}
             key={index}
             className="max-w-sm rounded-lg overflow-hidden bg-white"
             initial={{ opacity: 0, y: 50 }}
@@ -37,7 +32,7 @@ retun `${envs.BASE_API}/${url}`
             }}
           >
             <img
-              src={`https://proyecto-libro-igm4.onrender.com/${book?.url}`}
+              src={book?.url}
               alt={book?.title}
               className="w-full h-48 object-cover"
             />
